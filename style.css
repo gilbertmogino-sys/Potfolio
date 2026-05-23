@@ -1514,6 +1514,12 @@ body{
     transition:0.4s;
 
     backdrop-filter:blur(10px);
+
+    text-decoration:none;
+
+    color:white;
+
+    display:block;
 }
 
 .contact-card:hover{
