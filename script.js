@@ -297,31 +297,30 @@ musicBtn.addEventListener("click", () => {
 
 });
 
-/* ===== EMAIL JS ===== */
+/* ===== WHATSAPP FORM ===== */
 
-emailjs.init("mTw2qfg33K4MSerYY");
+const whatsappForm =
+document.getElementById("whatsapp-form");
 
-const form = document.getElementById("contact-form");
-
-form.addEventListener("submit", function(e){
+whatsappForm.addEventListener("submit", function(e){
 
     e.preventDefault();
 
-    emailjs.sendForm(
-        "service_n58ikn4",
-        "template_vmaibqb",
-        this
-    )
+    const name =
+    document.getElementById("name").value;
 
-    .then(function(){
+    const message =
+    document.getElementById("message").value;
 
-        alert("Message sent successfully 😎🔥");
+    const text =
+`Hello, my name is ${name}%0A%0A${message}`;
 
-        form.reset();
+    const phone =
+"261336707814";
 
-    }, function(error){
-
-        alert("Failed to send message ❌");
-    });
+    window.open(
+`https://wa.me/${phone}?text=${text}`,
+"_blank"
+    );
 
 });
