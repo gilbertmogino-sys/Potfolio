@@ -672,30 +672,29 @@
 
         </div>
 
-        <form action="https://formsubmit.co/gilbertmogino@gmail.com"
-             method="POST"
-             class="contact-form">
+        <form class="contact-form" id="contact-form">
 
-            <input type="hidden" name="_captcha" value="false">
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required>
 
-             <input type="text"
-               name="name"
-               placeholder="Your Name"
-               required>
+         <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required>
 
-            <input type="email"
-              name="email"
-              placeholder="Your Email"
-             required>
+         <textarea
+            name="message"
+            placeholder="Your Message"
+            required>
+         </textarea>
 
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              required></textarea>
-
-            <button type="submit">
-              Send Message
-            </button>
+         <button type="submit">
+            Send Message
+         </button>
 
         </form>
 
@@ -747,6 +746,8 @@
          <source src="music.mp3" type="audio/mpeg">
 
      </audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <script src="script.js"></script>
 

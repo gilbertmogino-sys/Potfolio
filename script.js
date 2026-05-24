@@ -296,3 +296,32 @@ musicBtn.addEventListener("click", () => {
     }
 
 });
+
+/* ===== EMAIL JS ===== */
+
+emailjs.init("mTw2qfg33K4MSerYY");
+
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_n58ikn4",
+        "template_vmaibqb",
+        this
+    )
+
+    .then(function(){
+
+        alert("Message sent successfully 😎🔥");
+
+        form.reset();
+
+    }, function(error){
+
+        alert("Failed to send message ❌");
+    });
+
+});
